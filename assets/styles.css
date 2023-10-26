@@ -1,0 +1,71 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.kontainer {
+    display: flex;
+    width: 100%;
+    /* align-items: center;
+    justify-content: center; */
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 20px;
+    width: 100%;
+    height: 65px;
+    background-color: #27AE60;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.5);
+    text-align: center; /* Meletakkan logo di tengah secara horizontal */
+}
+
+.logo {
+    img {
+        width: 900px;
+        height: 400px;
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0%;
+}
+
+.navigation>li {
+    list-style-type: none;
+    padding: 15px;
+}
+
+.navigation>li>a {
+    color: whitesmoke;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navigation>li>a:hover {
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+.active {
+    background-color: yellowgreen;
+    padding: 15px;
+}
+
+.active:hover {
+    color: black !important;
+}
