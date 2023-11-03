@@ -21,12 +21,16 @@ y = data['Diagnosa']
 clf = RandomForestClassifier(random_state=1)
 clf.fit(X, y)
 
-# Define routes
-@app.route('/')
-def index():
-    return render_template('index.html')
+# Define routes 
+@app.route('/') # ini masok ke directory pertama kali dibuka
+def home():
+    return render_template('login.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/main') # ini masok ke directory pertama kali dibuka
+def main():
+    return render_template('main.html')
+
+@app.route('/predict', methods=['POST']) #'/predict' 
 def predict():
     user_input = request.form['symptoms']
     user_input = [stemmer.stem(user_input)]
@@ -37,6 +41,7 @@ def predict():
     result = data[data['Diagnosa'] == prediction].iloc[0]
     penanganan = result['Penanganan']
     resiko = result['Risiko']
+    
 
     return render_template('result.html', diagnosis=prediction, penanganan=penanganan, resiko=resiko)
 

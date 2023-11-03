@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title></title>
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="website" property="og:type" />
+    <meta content="" property="og:description" />
+    <meta content="" property="og:title" />
+    <meta content="" name="description" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width" name="viewport" />
+    <style>
+      .bee-row,
+      .bee-row-content {
+        position: relative;
+      }
+
+      .bee-button .content {
+        text-align: center;
+      }
+
+      .bee-row-2 .bee-row-content,
+      .bee-row-3,
+      .bee-row-3 .bee-row-content {
+        background-color: #fff;
+        background-repeat: no-repeat;
+      }
+
+      .bee-row-1,
+      .bee-row-1 .bee-row-content,
+      .bee-row-2,
+      .bee-row-2 .bee-row-content,
+      .bee-row-3,
+      .bee-row-3 .bee-row-content {
+        background-repeat: no-repeat;
+      }
+
+      body {
+        background-color: #fff;
+        color: #000;
+        font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      }
+
+      a {
+        color: #0068a5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body,
+      h1 {
+        margin: 0;
+      }
+
+      .bee-menu .bee-hamburger-trigger {
+        display: none;
+      }
+
+      .bee-row-content {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .tmbl-logout {
+        background-color: blanchedalmond;
+        border-radius: 12px;
+        padding: 15px;
+      }
+
+      .bee-row-content.reverse,
+      .bee-row-content.reverse .bee-col {
+        -moz-transform: scale(1, -1);
+        -webkit-transform: scale(1, -1);
+        -o-transform: scale(1, -1);
+        -ms-transform: scale(1, -1);
+        transform: scale(1, -1);
+      }
+
+      .bee-row-content .bee-col-w3 {
+        flex-basis: 25%;
+      }
+
+      .bee-row-content .bee-col-w4 {
+        flex-basis: 33%;
+      }
+
+      .bee-row-content .bee-col-w5 {
+        flex-basis: 42%;
+      }
+
+      .bee-row-content .bee-col-w8 {
+        flex-basis: 67%;
+      }
+
+      .bee-row-content .bee-col-w12 {
+        flex-basis: 100%;
+      }
+
+      .bee-button a,
+      .bee-icon .bee-icon-label-right a,
+      .bee-menu ul li a {
+        text-decoration: none;
+      }
+
+      .bee-divider,
+      .bee-image {
+        overflow: auto;
+      }
+
+      .bee-image .bee-center {
+        margin: 0 auto;
+      }
+
+      .bee-row-2 .bee-col-3 .bee-block-1 {
+        width: 100%;
+      }
+
+      .bee-menu ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .bee-icon {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .bee-icon .bee-content {
+        display: flex;
+        align-items: center;
+      }
+
+      .bee-image img {
+        display: block;
+        width: 100%;
+      }
+
+      .bee-menu .bee-hamburger-controls {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+      }
+
+      .bee-menu .bee-hamburger-controls span {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        transition: 0.12s ease-in-out;
+      }
+
+      .bee-menu ul {
+        list-style-type: none;
+      }
+
+      .bee-menu ul.bee-horizontal li {
+        display: inline-block;
+      }
+
+      .bee-paragraph {
+        overflow-wrap: anywhere;
+      }
+
+      .bee-row-1 .bee-row-content {
+        color: #000;
+      }
+
+      .bee-row-1 .bee-col-1,
+      .bee-row-1 .bee-col-2,
+      .bee-row-2 .bee-col-1,
+      .bee-row-2 .bee-col-2,
+      .bee-row-2 .bee-col-3,
+      .bee-row-3 .bee-col-1 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+
+      .bee-row-1 .bee-col-1 .bee-block-1 {
+        color: #000;
+        font-family: inherit;
+        font-size: 14px;
+        text-align: left;
+      }
+
+      .bee-row-1 .bee-col-2 .bee-block-1 {
+        color: #171614;
+        font-family: inherit;
+        font-size: 19px;
+        padding-left: 5px;
+        padding-right: 10px;
+        padding-top: 10px;
+        text-align: right;
+      }
+
+      .bee-row-2 {
+        background-size: auto;
+      }
+
+      .bee-row-2 .bee-row-content {
+        background-size: auto;
+        color: #000;
+      }
+
+      .bee-row-2 .bee-col-1 .bee-block-2 {
+        padding-bottom: 15px;
+        padding-left: 20px;
+        padding-right: 10px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .bee-row-2 .bee-col-1 .bee-block-3 {
+        padding: 5px 5px 15px 20px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .bee-row-2 .bee-col-1 .bee-block-4 {
+        padding: 10px 10px 25px 20px;
+      }
+
+      .bee-row-2 .bee-col-1 .bee-block-5 {
+        padding: 10px;
+        text-align: left;
+      }
+
+      .bee-row-2 .bee-col-2 .bee-block-1 {
+        padding: 10px;
+      }
+
+      .bee-row-3 .bee-row-content {
+        color: #000;
+      }
+
+      .bee-row-3 .bee-col-1 .bee-block-1 {
+        color: #1e0e4b;
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        text-align: center;
+      }
+
+      .bee-row-1 .bee-col-1 .bee-block-1 .bee-icon-image {
+        padding: 5px 5px 5px 20px;
+      }
+
+      .bee-row-1
+        .bee-col-1
+        .bee-block-1
+        .bee-icon:not(.bee-icon-first)
+        .bee-content,
+      .bee-row-3
+        .bee-col-1
+        .bee-block-1
+        .bee-icon:not(.bee-icon-first)
+        .bee-content {
+        margin-left: 0;
+      }
+
+      .bee-row-1
+        .bee-col-1
+        .bee-block-1
+        .bee-icon::not(.bee-icon-last)
+        .bee-content {
+        margin-right: 0;
+      }
+
+      .bee-row-1 .bee-col-2 .bee-block-1 li {
+        padding: 5px 5px 5px 25px;
+      }
+
+      .bee-row-1 .bee-col-2 .bee-block-1 li a {
+        color: #171614;
+      }
+
+      @media (max-width: 768px) {
+        .bee-menu ul.with-bee-hamburger {
+          display: none;
+          padding: 5px 0;
+          position: relative;
+          top: -4px;
+        }
+
+        .bee-menu ul.with-bee-hamburger li {
+          display: block;
+          text-align: center;
+        }
+
+        .bee-menu ul.with-bee-hamburger li a {
+          text-decoration: none;
+        }
+
+        .bee-menu ul.with-bee-hamburger span {
+          display: none;
+        }
+
+        #bee-hamburger-memu-r0c1m0:checked ~ ul,
+        .bee-row-content:not(.no_stack) {
+          display: block;
+        }
+
+        .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
+          width: 48px;
+          height: 48px;
+          background-color: transparent;
+          border-radius: 0;
+        }
+
+        .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span {
+          width: 24px;
+          height: 24px;
+        }
+
+        .bee-row-1
+          .bee-col-2
+          .bee-block-1
+          .bee-hamburger-controls
+          span.bee-hamburger-open {
+          background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
+          transform: translate(-50%, -50%) scaleY(1);
+        }
+
+        .bee-row-1
+          .bee-col-2
+          .bee-block-1
+          .bee-hamburger-controls
+          span.bee-hamburger-close {
+          background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
+          transform: translate(-50%, -50%) scaleY(0);
+        }
+
+        .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
+          background-color: transparent;
+        }
+
+        .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
+        .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a {
+          color: #ffffff;
+        }
+
+        #bee-hamburger-memu-r0c1m0:checked
+          ~ .bee-hamburger-controls
+          .bee-hamburger-open {
+          transform: translate(-50%, -50%) scaleY(0);
+        }
+
+        #bee-hamburger-memu-r0c1m0:checked
+          ~ .bee-hamburger-controls
+          .bee-hamburger-close {
+          transform: translate(-50%, -50%) scaleY(1);
+        }
+      }
+
+      .bee-row-2 .bee-col-1 .bee-block-4 {
+        color: #7a7a7a;
+        font-size: 20px;
+        line-height: 180%;
+        text-align: left;
+      }
+
+      .bee-row-2 .bee-col-1 .bee-block-5 button {
+			background-color: #e57965;
+			border-bottom: 0 solid transparent;
+			border-left: 0 solid transparent;
+			border-radius: 4px;
+			border-right: 0px solid transparent;
+			border-top: 0 solid transparent;
+			color: #fff;
+			letter-spacing: normal;
+			line-height: 200%;
+			padding: 5px;
+			width: 100%
+		}
+
+      .bee-row-3 .bee-col-1 .bee-block-1 .bee-icon-image {
+        padding: 5px 6px 5px 5px;
+      }
+
+      .bee-row-3
+        .bee-col-1
+        .bee-block-1
+        .bee-icon::not(.bee-icon-last)
+        .bee-content {
+        margin-right: 0; 
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="bee-page-container">
+        <div class="bee-row bee-row-1">
+			<div class="bee-row-content no_stack">
+				<div class="bee-col bee-col-1 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-icons">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="64px" src="assets\logo.png" width="auto"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w8">
+					<div class="bee-block bee-block-1 bee-menu">
+						<nav class="bee-menu"><input class="bee-hamburger-trigger" id="bee-hamburger-memu-r0c1m0" type="checkbox"><label class="bee-hamburger-controls" for="bee-hamburger-memu-r0c1m0"><span class="bee-hamburger-open"></span><span class="bee-hamburger-close"></span></label>
+							<ul class="bee-horizontal with-bee-hamburger">
+								<li><a href=" " class="tmbl-logout" target="_self" title="">Logout</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+      <div class="bee-row bee-row-2">
+        <div class="bee-row-content reverse">
+          <div class="bee-col bee-col-1 bee-col-w5">
+            <div class="bee-block bee-block-1 bee-spacer">
+              <div class="spacer" style="height: 60px"></div>
+            </div>
+            <div class="bee-block bee-block-2 bee-heading">
+              <h1
+                style="
+                  color: #e57965;
+                  direction: ltr;
+                  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+                  font-size: 19px;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  line-height: 120%;
+                  text-align: left;
+                  margin-top: 0;
+                  margin-bottom: 0;
+                "
+              >
+                <span class="tinyMce-placeholder">Deteksi penyakit sapi </span>
+              </h1>
+            </div>
+            <div class="bee-block bee-block-3 bee-heading">
+              <h1
+                style="
+                  color: #171614;
+                  direction: ltr;
+                  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+                  font-size: 45px;
+                  font-weight: 700;
+                  letter-spacing: normal;
+                  line-height: 120%;
+                  text-align: left;
+                  margin-top: 0;
+                  margin-bottom: 0;
+                "
+              >
+                <span class="tinyMce-placeholder"
+                  >Sistem Pakar Diagnosa Penyakit Pada Sapi Menggunakan Metode
+                  Rational Unified Process</span
+                >
+              </h1>
+            </div>
+            <div class="bee-block bee-block-4 bee-spacer">
+              <div class="spacer" style="height: 45px"></div>
+            </div>
+            <div class="bee-block bee-block-5 bee-form">
+              <form
+                accept-charset="UTF-8"
+                action="ACTION_PLACEHOLDER"
+                autocomplete="on"
+                enctype="multipart/form-data"
+                method="post"
+                target="_self" ></form>
+              
+            </form>
+            <div class="bee-form-row">
+              <form method="post" action="/predict">
+                      <label for="symptoms">Enter your symptoms:</label>
+                      <input type="text" name="symptoms" id="symptoms">
+                      <input type="submit" value="Submit">
+                  </form>
+               </div>
+
+                  <div class="bee-block bee-block-6 bee-spacer">
+                    <div class="spacer" style="height: 30px"></div>
+                  </div>
+
+                </div>
+                <div class="bee-form-row">
+                  <div class="bee-field bee-field-r1c0m4i2">
+                    <div class="bee-button-container">
+                      <button
+                        id="r1c0m4i2"
+                        name="submit"
+                        type="submit"
+                        value="CARI PENYAKIT"
+                      >
+                        CARI PENYAKIT
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="bee-block bee-block-6 bee-spacer">
+              <div class="spacer" style="height: 70px"></div>
+            </div>
+          </div>
+          <div class="bee-col bee-col-2 bee-col-w3">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div class="spacer" style="height: 0px"></div>
+            </div>
+            <div class="bee-block bee-block-2 bee-divider">
+              <div
+                class="center bee-separator"
+                style="border-top: 1px solid #dddddd; width: 100%"
+              ></div>
+            </div>
+          </div>
+          <div class="bee-col bee-col-3 bee-col-w4">
+            <div class="bee-block bee-block-1 bee-spacer">
+              <div class="spacer" style="height: 60px"></div>
+            </div>
+            <div class="bee-block bee-block-2 bee-image">
+              <img
+                alt="Sapi Sehat Ente Senang"
+                class="bee-center bee-fixedwidth bee-fullwidthOnMobile"
+                src="https://img.freepik.com/free-photo/fun-3d-cartoon-cow-with-mask_183364-80084.jpg?w=740&t=st=1698893774~exp=1698894374~hmac=2ca0a93283ef5ff898d56732b80ad46c55492c92fb1be0946cd27d845234f8c8"
+                style="max-width: 480px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bee-row bee-row-3">
+        <div class="bee-row-content">
+          <div class="bee-col bee-col-1 bee-col-w12">
+            <div class="bee-block bee-block-1 bee-divider">
+              <div
+                class="center bee-separator"
+                style="border-top: 1px solid #dddddd; width: 100%"
+              ></div>
+            </div>
+            <div class="bee-block bee-block-2 bee-text">
+              <div
+                class="bee-text-content"
+                style="
+                  line-height: 120%;
+                  font-size: 12px;
+                  font-family: inherit;
+                  color: #555555;
+                "
+              >
+                <p
+                  style="font-size: 22px; line-height: 26px; text-align: center"
+                >
+                  Behind the word mountains, far from the countries Vokalia and
+                  Consonantia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
