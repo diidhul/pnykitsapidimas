@@ -1,266 +1,271 @@
 <!DOCTYPE html>
 <html>
-  
-<head>
-  <title></title>
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="website" property="og:type" />
-  <meta content="" property="og:description" />
-  <meta content="" property="og:title" />
-  <meta content="" name="description" />
-  <meta charset="utf-8" />
-  <meta content="width=device-width" name="viewport" />
-  <style>
-    .-row,
-    .-row-content {
-      position: relative;
-    }
-
-    .-button .content {
-      text-align: center;
-    }
-
-    .-row-1,
-    .-row-2,
-    .-row-4,
-    .-row-4 .-row-content {
-      background-color: #fff;
-      background-repeat: no-repeat;
-    }
-
-    body {
-      background-color: #f8f2f0;
-      color: #000;
-      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-    }
-
-    a {
-      color: #0068a5;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body,
-    h1,
-    p {
-      margin: 0;
-    }
-
-    .-row-content {
-      max-width: 1440px;
-      margin: 0 auto;
-      display: flex;
-    }
-
-    .-row-content.reverse,
-    .-row-content.reverse .-col {
-      -moz-transform: scale(1, -1);
-      -webkit-transform: scale(1, -1);
-      -o-transform: scale(1, -1);
-      -ms-transform: scale(1, -1);
-      transform: scale(1, -1);
-    }
-
-    .-row-content .-col-w3 {
-      flex-basis: 25%;
-    }
-
-    .-row-content .-col-w4 {
-      flex-basis: 33%;
-    }
-
-    .-row-content .-col-w5 {
-      flex-basis: 42%;
-    }
-
-    .-row-content .-col-w8 {
-      flex-basis: 67%;
-    }
-
-    .-row-content .-col-w12 {
-      flex-basis: 100%;
-    }
-
-    .-button a,
-    .-icon .-icon-label-right a {
-      text-decoration: none;
-    }
-
-    .-divider,
-    .-image {
-      overflow: auto;
-    }
-
-    .-divider .center,
-    .-image .-center {
-      margin: 0 auto;
-    }
-
-    .-row-2 .-col-3 .-block-2 {
-      width: 100%;
-    }
-
-    .-icon {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    .-icon .-content {
-      display: flex;
-      align-items: center;
-    }
-
-    .-image img {
-      display: block;
-      width: 100%;
-    }
-
-    .-text {
-      overflow-wrap: anywhere;
-    }
-
-    @media (max-width: 768px) {
-      .-row-content:not(.no_stack) {
-        display: block;
+  <head>
+    <title></title>
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="website" property="og:type" />
+    <meta content="" property="og:description" />
+    <meta content="" property="og:title" />
+    <meta content="" name="description" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width" name="viewport" />
+    <style>
+      .-row,
+      .-row-content {
+        position: relative;
       }
-    }
 
-    .-row-1 .-row-content,
-    .-row-3 .-row-content {
-      background-repeat: no-repeat;
-      color: #000;
-    }
+      .-button .content {
+        text-align: center;
+      }
 
-    .-row-1 .-col-1,
-    .-row-1 .-col-2 {
-      padding-bottom: 5px;
-      padding-top: 5px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+      .-row-1,
+      .-row-2,
+      .-row-4,
+      .-row-4 .-row-content {
+        background-color: #fff;
+        background-repeat: no-repeat;
+      }
 
-    .-row-1 .-col-1 .-block-1 {
-      color: #000;
-      font-family: inherit;
-      font-size: 14px;
-      text-align: left;
-    }
+      body {
+        background-color: #f8f2f0;
+        color: #000;
+        font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      }
 
-    .-row-1 .-col-2 .-block-1 {
-      padding: 10px;
-      text-align: right;
-    }
+      a {
+        color: #0068a5;
+      }
 
-    .-row-2 {
-      background-size: auto;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    .-row-2 .-row-content {
-      background-repeat: no-repeat;
-      background-size: auto;
-      color: #000;
-    }
+      body,
+      h1,
+      p {
+        margin: 0;
+      }
 
-    .-row-2 .-col-1,
-    .-row-2 .-col-2,
-    .-row-2 .-col-3,
-    .-row-3 .-col-1,
-    .-row-4 .-col-1 {
-      padding-bottom: 5px;
-      padding-top: 5px;
-    }
+      .-row-content {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+      }
 
-    .-row-2 .-col-1 .-block-2 {
-      padding-bottom: 15px;
-      padding-left: 20px;
-      padding-right: 10px;
-      text-align: center;
-      width: 100%;
-    }
+      .-row-content.reverse,
+      .-row-content.reverse .-col {
+        -moz-transform: scale(1, -1);
+        -webkit-transform: scale(1, -1);
+        -o-transform: scale(1, -1);
+        -ms-transform: scale(1, -1);
+        transform: scale(1, -1);
+      }
 
-    .-row-2 .-col-1 .-block-3 {
-      padding: 5px 5px 15px 20px;
-      text-align: center;
-      width: 100%;
-    }
+      .-row-content .-col-w3 {
+        flex-basis: 25%;
+      }
 
-    .-row-2 .-col-1 .-block-5 {
-      padding: 10px;
-      text-align: center;
-    }
+      .-row-content .-col-w4 {
+        flex-basis: 33%;
+      }
 
-    .-row-2 .-col-2 .-block-1,
-    .-row-2 .-col-2 .-block-2 {
-      padding: 10px;
-    }
+      .-row-content .-col-w5 {
+        flex-basis: 42%;
+      }
 
-    .-row-3 {
-      background-image: url("https://app-rsrc.get.io/public/resources/defaultrows/background1.png");
-      background-position: top center;
-      background-repeat: repeat;
-    }
+      .-row-content .-col-w8 {
+        flex-basis: 67%;
+      }
 
-    .-row-3 .-col-1 .-block-1 {
-      padding: 20px;
-    }
+      .-row-content .-col-w12 {
+        flex-basis: 100%;
+      }
 
-    .-row-4 .-row-content {
-      color: #000;
-    }
+      .-button a,
+      .-icon .-icon-label-right a {
+        text-decoration: none;
+      }
 
-    .-row-4 .-col-1 .-block-1 {
-      color: #1e0e4b;
-      font-family: Inter, sans-serif;
-      font-size: 15px;
-      padding-bottom: 5px;
-      padding-top: 5px;
-      text-align: center;
-    }
+      .-divider,
+      .-image {
+        overflow: auto;
+      }
 
-    .-row-1 .-col-1 .-block-1 .-icon-image {
-      padding: 5px 5px 5px 20px;
-    }
+      .-divider .center,
+      .-image .-center {
+        margin: 0 auto;
+      }
 
-    .-row-1 .-col-1 .-block-1 .-icon:not(.-icon-first) .-content,
-    .-row-4 .-col-1 .-block-1 .-icon:not(.-icon-first) .-content {
-      margin-left: 0;
-    }
+      .-row-2 .-col-3 .-block-2 {
+        width: 100%;
+      }
 
-    .-row-1 .-col-1 .-block-1 .-icon::not(.-icon-last) .-content {
-      margin-right: 0;
-    }
+      .-icon {
+        display: inline-block;
+        vertical-align: middle;
+      }
 
-    .-row-4 .-col-1 .-block-1 .-icon-image {
-      padding: 5px 6px 5px 5px;
-    }
+      .-icon .-content {
+        display: flex;
+        align-items: center;
+      }
 
-    .-row-4 .-col-1 .-block-1 .-icon::not(.-icon-last) .-content {
-      margin-right: 0;
-    }
-  </style>
-</head>
+      .-image img {
+        display: block;
+        width: 100%;
+      }
 
-<body>
-  <div class="-page-container">
-    <div class="-row -row-1">
-      <div class="-row-content no_stack">
-        <div class="-col -col-1 -col-w4">
-          <div class="-block -block-1 -icons">
-            <div class="-icon -icon-last">
-              <div class="-content">
-                <div class="-icon-image">
-                  <img height="64px" src="pnykitsapidimas/Web App/templates/assets/logo.png" width="auto" />
+      .-text {
+        overflow-wrap: anywhere;
+      }
+
+      @media (max-width: 768px) {
+        .-row-content:not(.no_stack) {
+          display: block;
+        }
+      }
+
+      .-row-1 .-row-content,
+      .-row-3 .-row-content {
+        background-repeat: no-repeat;
+        color: #000;
+      }
+
+      .-row-1 .-col-1,
+      .-row-1 .-col-2 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .-row-1 .-col-1 .-block-1 {
+        color: #000;
+        font-family: inherit;
+        font-size: 14px;
+        text-align: left;
+      }
+
+      .-row-1 .-col-2 .-block-1 {
+        padding: 10px;
+        text-align: right;
+      }
+
+      .-row-2 {
+        background-size: auto;
+      }
+
+      .-row-2 .-row-content {
+        background-repeat: no-repeat;
+        background-size: auto;
+        color: #000;
+      }
+
+      .-row-2 .-col-1,
+      .-row-2 .-col-2,
+      .-row-2 .-col-3,
+      .-row-3 .-col-1,
+      .-row-4 .-col-1 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+
+      .-row-2 .-col-1 .-block-2 {
+        padding-bottom: 15px;
+        padding-left: 20px;
+        padding-right: 10px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .-row-2 .-col-1 .-block-3 {
+        padding: 5px 5px 15px 20px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .-row-2 .-col-1 .-block-5 {
+        padding: 10px;
+        text-align: center;
+      }
+
+      .-row-2 .-col-2 .-block-1,
+      .-row-2 .-col-2 .-block-2 {
+        padding: 10px;
+      }
+
+      .-row-3 {
+        background-image: url("https://app-rsrc.get.io/public/resources/defaultrows/background1.png");
+        background-position: top center;
+        background-repeat: repeat;
+      }
+
+      .-row-3 .-col-1 .-block-1 {
+        padding: 20px;
+      }
+
+      .-row-4 .-row-content {
+        color: #000;
+      }
+
+      .-row-4 .-col-1 .-block-1 {
+        color: #1e0e4b;
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        text-align: center;
+      }
+
+      .-row-1 .-col-1 .-block-1 .-icon-image {
+        padding: 5px 5px 5px 20px;
+      }
+
+      .-row-1 .-col-1 .-block-1 .-icon:not(.-icon-first) .-content,
+      .-row-4 .-col-1 .-block-1 .-icon:not(.-icon-first) .-content {
+        margin-left: 0;
+      }
+
+      .-row-1 .-col-1 .-block-1 .-icon::not(.-icon-last) .-content {
+        margin-right: 0;
+      }
+
+      .-row-4 .-col-1 .-block-1 .-icon-image {
+        padding: 5px 6px 5px 5px;
+      }
+
+      .-row-4 .-col-1 .-block-1 .-icon::not(.-icon-last) .-content {
+        margin-right: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="-page-container">
+      <div class="-row -row-1">
+        <div class="-row-content no_stack">
+          <div class="-col -col-1 -col-w4">
+            <div class="-block -block-1 -icons">
+              <div class="-icon -icon-last">
+                <div class="-content">
+                  <div class="-icon-image">
+                    <img
+                      height="64px"
+                      src="pnykitsapidimas/Web App/templates/assets/logo.png"
+                      width="auto"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="-col -col-2 -col-w8">
-          <div class="-block -block-1 -button">
-            <div class="-button-content" style="
+          <div class="-col -col-2 -col-w8">
+            <div class="-block -block-1 -button">
+              <div
+                class="-button-content"
+                style="
                   font-size: 18px;
                   background-color: #e57965;
                   border-bottom: 0px solid transparent;
@@ -279,25 +284,30 @@
                   padding-top: 5px;
                   width: auto;
                   display: inline-block;
-                ">
-              <span style="
+                "
+              >
+                <span
+                  style="
                     word-break: break-word;
                     font-size: 18px;
                     line-height: 200%;
-                  ">Login</span>
+                  "
+                  >Login</span
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="-row -row-2">
-      <div class="-row-content reverse">
-        <div class="-col -col-1 -col-w5">
-          <div class="-block -block-1 -spacer">
-            <div class="spacer" style="height: 60px"></div>
-          </div>
-          <div class="-block -block-2 -heading">
-            <h1 style="
+      <div class="-row -row-2">
+        <div class="-row-content reverse">
+          <div class="-col -col-1 -col-w5">
+            <div class="-block -block-1 -spacer">
+              <div class="spacer" style="height: 60px"></div>
+            </div>
+            <div class="-block -block-2 -heading">
+              <h1
+                style="
                   color: #e57965;
                   direction: ltr;
                   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
@@ -308,12 +318,14 @@
                   text-align: left;
                   margin-top: 0;
                   margin-bottom: 0;
-                ">
-              <span class="tinyMce-placeholder">Deteksi penyakit sapi </span>
-            </h1>
-          </div>
-          <div class="-block -block-3 -heading">
-            <h1 style="
+                "
+              >
+                <span class="tinyMce-placeholder">Deteksi penyakit sapi </span>
+              </h1>
+            </div>
+            <div class="-block -block-3 -heading">
+              <h1
+                style="
                   color: #171614;
                   direction: ltr;
                   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
@@ -324,16 +336,21 @@
                   text-align: left;
                   margin-top: 0;
                   margin-bottom: 0;
-                ">
-              <span class="tinyMce-placeholder">Sistem Pakar Diagnosa Penyakit Pada Sapi Menggunakan Metode
-                Rational Unified Process</span>
-            </h1>
-          </div>
-          <div class="-block -block-4 -spacer">
-            <div class="spacer" style="height: 45px"></div>
-          </div>
-          <div class="-block -block-5 -button">
-            <div class="-button-content" style="
+                "
+              >
+                <span class="tinyMce-placeholder"
+                  >Sistem Pakar Diagnosa Penyakit Pada Sapi Menggunakan Metode
+                  Rational Unified Process</span
+                >
+              </h1>
+            </div>
+            <div class="-block -block-4 -spacer">
+              <div class="spacer" style="height: 45px"></div>
+            </div>
+            <div class="-block -block-5 -button">
+              <div
+                class="-button-content"
+                style="
                   font-size: 16px;
                   background-color: #e57965;
                   border-bottom: 0px solid transparent;
@@ -353,40 +370,49 @@
                   padding-top: 10px;
                   width: auto;
                   display: inline-block;
-                ">
-              <span style="
+                "
+              >
+                <span
+                  style="
                     word-break: break-word;
                     font-size: 16px;
                     line-height: 200%;
                     letter-spacing: normal;
-                  ">Pelajari Lebih Lanjut</span>
+                  "
+                  >Pelajari Lebih Lanjut</span
+                >
+              </div>
+            </div>
+            <div class="-block -block-6 -spacer">
+              <div class="spacer" style="height: 70px"></div>
             </div>
           </div>
-          <div class="-block -block-6 -spacer">
-            <div class="spacer" style="height: 70px"></div>
+          <div class="-col -col-2 -col-w3">
+            <div class="-block -block-1 -divider">
+              <div
+                class="center -separator"
+                style="border-top: 1px solid #e57965; width: 100%"
+              ></div>
+            </div>
+            <div class="-block -block-2 -divider">
+              <div class="spacer" style="height: 0px"></div>
+            </div>
           </div>
-        </div>
-        <div class="-col -col-2 -col-w3">
-          <div class="-block -block-1 -divider">
-            <div class="center -separator" style="border-top: 1px solid #e57965; width: 100%"></div>
-          </div>
-          <div class="-block -block-2 -divider">
-            <div class="spacer" style="height: 0px"></div>
-          </div>
-        </div>
-        <div class="-col -col-3 -col-w4">
-          <div class="-block -block-1 -spacer">
-            <div class="spacer" style="height: 60px"></div>
-          </div>
-          <div class="-block -block-2 -image">
-            <img alt="Sapi Sehat Ente Senang" class="-center -fixedwidth -fullwidthOnMobile"
-              src="https://img.freepik.com/free-photo/fun-3d-cartoon-cow-with-mask_183364-80084.jpg?w=740&t=st=1698893774~exp=1698894374~hmac=2ca0a93283ef5ff898d56732b80ad46c55492c92fb1be0946cd27d845234f8c8"
-              style="max-width: 480px" />
+          <div class="-col -col-3 -col-w4">
+            <div class="-block -block-1 -spacer">
+              <div class="spacer" style="height: 60px"></div>
+            </div>
+            <div class="-block -block-2 -image">
+              <img
+                alt="Sapi Sehat Ente Senang"
+                class="-center -fixedwidth -fullwidthOnMobile"
+                src="https://img.freepik.com/free-photo/fun-3d-cartoon-cow-with-mask_183364-80084.jpg?w=740&t=st=1698893774~exp=1698894374~hmac=2ca0a93283ef5ff898d56732b80ad46c55492c92fb1be0946cd27d845234f8c8"
+                style="max-width: 480px"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
-</body>
+  </body>
 </html>
