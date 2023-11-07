@@ -13,7 +13,7 @@
     <style>
       .-row,
       .-row-content {
-        position: relative;
+        position: static;
       }
 
       .-form .-form-row .-field button {
@@ -487,25 +487,21 @@
                   <form method="post" action="/predict">
                     <label for="symptoms">Enter your symptoms:</label>
                     <input type="text" name="symptoms" id="symptoms" />
-                    <input
-                      type="submit"
-                      value="Submit"
-                      placeholder="Badan Panas, Mata merah, Sempoyongan"
-                    />
+                    <input class="-button-container">
+                      <button
+                        name="submit"
+                        value= "submit"
+                        type="submit"
+                        value="Submit"
+                        placeholder="Badan Panas, Mata merah, Sempoyongan"
+                      >
+                        CARI PENYAKIT
+                      </button>
                   </form>
                 </div>
                 <div class="-form-row">
                   <div class="-field -field-r1c0m4i2">
-                    <div class="-button-container">
-                      <button
-                        id="r1c0m4i2"
-                        name="submit"
-                        type="submit"
-                        value="CARI PENYAKIT"
-                      >
-                        CARI PENYAKIT
-                      </button>
-                    </div>
+                   
                   </div>
                 </div>
               </form>
