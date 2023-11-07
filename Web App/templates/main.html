@@ -10,30 +10,29 @@
     <meta content="" name="description" />
     <meta charset="utf-8" />
     <meta content="width=device-width" name="viewport" />
-    <link rel="stylesheet" href="pnykitsapidimas/Web App/templates/assets/styles.css" />
-    <!-- <style>
-      .bee-row,
-      .bee-row-content {
+    <style>
+      .-row,
+      .-row-content {
         position: relative;
       }
 
-      .bee-button .content {
+      .-button .content {
         text-align: center;
       }
 
-      .bee-row-2 .bee-row-content,
-      .bee-row-3,
-      .bee-row-3 .bee-row-content {
+      .-row-2 .-row-content,
+      .-row-3,
+      .-row-3 .-row-content {
         background-color: #fff;
         background-repeat: no-repeat;
       }
 
-      .bee-row-1,
-      .bee-row-1 .bee-row-content,
-      .bee-row-2,
-      .bee-row-2 .bee-row-content,
-      .bee-row-3,
-      .bee-row-3 .bee-row-content {
+      .-row-1,
+      .-row-1 .-row-content,
+      .-row-2,
+      .-row-2 .-row-content,
+      .-row-3,
+      .-row-3 .-row-content {
         background-repeat: no-repeat;
       }
 
@@ -56,11 +55,11 @@
         margin: 0;
       }
 
-      .bee-menu .bee-hamburger-trigger {
+      .-menu .-hamburger-trigger {
         display: none;
       }
 
-      .bee-row-content {
+      .-row-content {
         max-width: 1440px;
         margin: 0 auto;
         display: flex;
@@ -72,8 +71,8 @@
         padding: 15px;
       }
 
-      .bee-row-content.reverse,
-      .bee-row-content.reverse .bee-col {
+      .-row-content.reverse,
+      .-row-content.reverse .-col {
         -moz-transform: scale(1, -1);
         -webkit-transform: scale(1, -1);
         -o-transform: scale(1, -1);
@@ -81,72 +80,72 @@
         transform: scale(1, -1);
       }
 
-      .bee-row-content .bee-col-w3 {
+      .-row-content .-col-w3 {
         flex-basis: 25%;
       }
 
-      .bee-row-content .bee-col-w4 {
+      .-row-content .-col-w4 {
         flex-basis: 33%;
       }
 
-      .bee-row-content .bee-col-w5 {
+      .-row-content .-col-w5 {
         flex-basis: 42%;
       }
 
-      .bee-row-content .bee-col-w8 {
+      .-row-content .-col-w8 {
         flex-basis: 67%;
       }
 
-      .bee-row-content .bee-col-w12 {
+      .-row-content .-col-w12 {
         flex-basis: 100%;
       }
 
-      .bee-button a,
-      .bee-icon .bee-icon-label-right a,
-      .bee-menu ul li a {
+      .-button a,
+      .-icon .-icon-label-right a,
+      .-menu ul li a {
         text-decoration: none;
       }
 
-      .bee-divider,
-      .bee-image {
+      .-divider,
+      .-image {
         overflow: auto;
       }
 
-      .bee-image .bee-center {
+      .-image .-center {
         margin: 0 auto;
       }
 
-      .bee-row-2 .bee-col-3 .bee-block-1 {
+      .-row-2 .-col-3 .-block-1 {
         width: 100%;
       }
 
-      .bee-menu ul {
+      .-menu ul {
         margin: 0;
         padding: 0;
       }
 
-      .bee-icon {
+      .-icon {
         display: inline-block;
         vertical-align: middle;
       }
 
-      .bee-icon .bee-content {
+      .-icon .-content {
         display: flex;
         align-items: center;
       }
 
-      .bee-image img {
+      .-image img {
         display: block;
         width: 100%;
       }
 
-      .bee-menu .bee-hamburger-controls {
+      .-menu .-hamburger-controls {
         cursor: pointer;
         display: inline-block;
         position: relative;
       }
 
-      .bee-menu .bee-hamburger-controls span {
+      .-menu .-hamburger-controls span {
         display: block;
         position: absolute;
         top: 50%;
@@ -156,40 +155,40 @@
         transition: 0.12s ease-in-out;
       }
 
-      .bee-menu ul {
+      .-menu ul {
         list-style-type: none;
       }
 
-      .bee-menu ul.bee-horizontal li {
+      .-menu ul.-horizontal li {
         display: inline-block;
       }
 
-      .bee-paragraph {
+      .-paragraph {
         overflow-wrap: anywhere;
       }
 
-      .bee-row-1 .bee-row-content {
+      .-row-1 .-row-content {
         color: #000;
       }
 
-      .bee-row-1 .bee-col-1,
-      .bee-row-1 .bee-col-2,
-      .bee-row-2 .bee-col-1,
-      .bee-row-2 .bee-col-2,
-      .bee-row-2 .bee-col-3,
-      .bee-row-3 .bee-col-1 {
+      .-row-1 .-col-1,
+      .-row-1 .-col-2,
+      .-row-2 .-col-1,
+      .-row-2 .-col-2,
+      .-row-2 .-col-3,
+      .-row-3 .-col-1 {
         padding-bottom: 5px;
         padding-top: 5px;
       }
 
-      .bee-row-1 .bee-col-1 .bee-block-1 {
+      .-row-1 .-col-1 .-block-1 {
         color: #000;
         font-family: inherit;
         font-size: 14px;
         text-align: left;
       }
 
-      .bee-row-1 .bee-col-2 .bee-block-1 {
+      .-row-1 .-col-2 .-block-1 {
         color: #171614;
         font-family: inherit;
         font-size: 19px;
@@ -199,16 +198,16 @@
         text-align: right;
       }
 
-      .bee-row-2 {
+      .-row-2 {
         background-size: auto;
       }
 
-      .bee-row-2 .bee-row-content {
+      .-row-2 .-row-content {
         background-size: auto;
         color: #000;
       }
 
-      .bee-row-2 .bee-col-1 .bee-block-2 {
+      .-row-2 .-col-1 .-block-2 {
         padding-bottom: 15px;
         padding-left: 20px;
         padding-right: 10px;
@@ -216,30 +215,30 @@
         width: 100%;
       }
 
-      .bee-row-2 .bee-col-1 .bee-block-3 {
+      .-row-2 .-col-1 .-block-3 {
         padding: 5px 5px 15px 20px;
         text-align: center;
         width: 100%;
       }
 
-      .bee-row-2 .bee-col-1 .bee-block-4 {
+      .-row-2 .-col-1 .-block-4 {
         padding: 10px 10px 25px 20px;
       }
 
-      .bee-row-2 .bee-col-1 .bee-block-5 {
+      .-row-2 .-col-1 .-block-5 {
         padding: 10px;
         text-align: left;
       }
 
-      .bee-row-2 .bee-col-2 .bee-block-1 {
+      .-row-2 .-col-2 .-block-1 {
         padding: 10px;
       }
 
-      .bee-row-3 .bee-row-content {
+      .-row-3 .-row-content {
         color: #000;
       }
 
-      .bee-row-3 .bee-col-1 .bee-block-1 {
+      .-row-3 .-col-1 .-block-1 {
         color: #1e0e4b;
         font-family: Inter, sans-serif;
         font-size: 15px;
@@ -248,125 +247,125 @@
         text-align: center;
       }
 
-      .bee-row-1 .bee-col-1 .bee-block-1 .bee-icon-image {
+      .-row-1 .-col-1 .-block-1 .-icon-image {
         padding: 5px 5px 5px 20px;
       }
 
-      .bee-row-1
-        .bee-col-1
-        .bee-block-1
-        .bee-icon:not(.bee-icon-first)
-        .bee-content,
-      .bee-row-3
-        .bee-col-1
-        .bee-block-1
-        .bee-icon:not(.bee-icon-first)
-        .bee-content {
+      .-row-1
+        .-col-1
+        .-block-1
+        .-icon:not(.-icon-first)
+        .-content,
+      .-row-3
+        .-col-1
+        .-block-1
+        .-icon:not(.-icon-first)
+        .-content {
         margin-left: 0;
       }
 
-      .bee-row-1
-        .bee-col-1
-        .bee-block-1
-        .bee-icon::not(.bee-icon-last)
-        .bee-content {
+      .-row-1
+        .-col-1
+        .-block-1
+        .-icon::not(.-icon-last)
+        .-content {
         margin-right: 0;
       }
 
-      .bee-row-1 .bee-col-2 .bee-block-1 li {
+      .-row-1 .-col-2 .-block-1 li {
         padding: 5px 5px 5px 25px;
       }
 
-      .bee-row-1 .bee-col-2 .bee-block-1 li a {
+      .-row-1 .-col-2 .-block-1 li a {
         color: #171614;
       }
 
       @media (max-width: 768px) {
-        .bee-menu ul.with-bee-hamburger {
+        .-menu ul.with--hamburger {
           display: none;
           padding: 5px 0;
           position: relative;
           top: -4px;
         }
 
-        .bee-menu ul.with-bee-hamburger li {
+        .-menu ul.with--hamburger li {
           display: block;
           text-align: center;
         }
 
-        .bee-menu ul.with-bee-hamburger li a {
+        .-menu ul.with--hamburger li a {
           text-decoration: none;
         }
 
-        .bee-menu ul.with-bee-hamburger span {
+        .-menu ul.with--hamburger span {
           display: none;
         }
 
-        #bee-hamburger-memu-r0c1m0:checked ~ ul,
-        .bee-row-content:not(.no_stack) {
+        #-hamburger-memu-r0c1m0:checked ~ ul,
+        .-row-content:not(.no_stack) {
           display: block;
         }
 
-        .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
+        .-row-1 .-col-2 .-block-1 .-hamburger-controls {
           width: 48px;
           height: 48px;
           background-color: transparent;
           border-radius: 0;
         }
 
-        .bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span {
+        .-row-1 .-col-2 .-block-1 .-hamburger-controls span {
           width: 24px;
           height: 24px;
         }
 
-        .bee-row-1
-          .bee-col-2
-          .bee-block-1
-          .bee-hamburger-controls
-          span.bee-hamburger-open {
+        .-row-1
+          .-col-2
+          .-block-1
+          .-hamburger-controls
+          span.-hamburger-open {
           background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
           transform: translate(-50%, -50%) scaleY(1);
         }
 
-        .bee-row-1
-          .bee-col-2
-          .bee-block-1
-          .bee-hamburger-controls
-          span.bee-hamburger-close {
+        .-row-1
+          .-col-2
+          .-block-1
+          .-hamburger-controls
+          span.-hamburger-close {
           background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
           transform: translate(-50%, -50%) scaleY(0);
         }
 
-        .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
+        .-row-1 .-col-2 .-block-1 ul.with--hamburger {
           background-color: transparent;
         }
 
-        .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
-        .bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a {
+        .-row-1 .-col-2 .-block-1 ul.with--hamburger li,
+        .-row-1 .-col-2 .-block-1 ul.with--hamburger li a {
           color: #ffffff;
         }
 
-        #bee-hamburger-memu-r0c1m0:checked
-          ~ .bee-hamburger-controls
-          .bee-hamburger-open {
+        #-hamburger-memu-r0c1m0:checked
+          ~ .-hamburger-controls
+          .-hamburger-open {
           transform: translate(-50%, -50%) scaleY(0);
         }
 
-        #bee-hamburger-memu-r0c1m0:checked
-          ~ .bee-hamburger-controls
-          .bee-hamburger-close {
+        #-hamburger-memu-r0c1m0:checked
+          ~ .-hamburger-controls
+          .-hamburger-close {
           transform: translate(-50%, -50%) scaleY(1);
         }
       }
 
-      .bee-row-2 .bee-col-1 .bee-block-4 {
+      .-row-2 .-col-1 .-block-4 {
         color: #7a7a7a;
         font-size: 20px;
         line-height: 180%;
         text-align: left;
       }
 
-      .bee-row-2 .bee-col-1 .bee-block-5 button {
+      .-row-2 .-col-1 .-block-5 button {
 			background-color: #e57965;
 			border-bottom: 0 solid transparent;
 			border-left: 0 solid transparent;
@@ -380,38 +379,38 @@
 			width: 100%
 		}
 
-      .bee-row-3 .bee-col-1 .bee-block-1 .bee-icon-image {
+      .-row-3 .-col-1 .-block-1 .-icon-image {
         padding: 5px 6px 5px 5px;
       }
 
-      .bee-row-3
-        .bee-col-1
-        .bee-block-1
-        .bee-icon::not(.bee-icon-last)
-        .bee-content {
+      .-row-3
+        .-col-1
+        .-block-1
+        .-icon::not(.-icon-last)
+        .-content {
         margin-right: 0; 
-      } -->
+      }
 
     </style>
   </head>
 
   <body>
-    <div class="bee-page-container">
-        <div class="bee-row bee-row-1">
-			<div class="bee-row-content no_stack">
-				<div class="bee-col bee-col-1 bee-col-w4">
-					<div class="bee-block bee-block-1 bee-icons">
-						<div class="bee-icon bee-icon-last">
-							<div class="bee-content">
-								<div class="bee-icon-image"><img height="64px" src="assets\logo.png" width="auto"></div>
+    <div class="-page-container">
+        <div class="-row -row-1">
+			<div class="-row-content no_stack">
+				<div class="-col -col-1 -col-w4">
+					<div class="-block -block-1 -icons">
+						<div class="-icon -icon-last">
+							<div class="-content">
+								<div class="-icon-image"><img height="64px" src="assets\logo.png" width="auto"></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="bee-col bee-col-2 bee-col-w8">
-					<div class="bee-block bee-block-1 bee-menu">
-						<nav class="bee-menu"><input class="bee-hamburger-trigger" id="bee-hamburger-memu-r0c1m0" type="checkbox"><label class="bee-hamburger-controls" for="bee-hamburger-memu-r0c1m0"><span class="bee-hamburger-open"></span><span class="bee-hamburger-close"></span></label>
-							<ul class="bee-horizontal with-bee-hamburger">
+				<div class="-col -col-2 -col-w8">
+					<div class="-block -block-1 -menu">
+						<nav class="-menu"><input class="-hamburger-trigger" id="-hamburger-memu-r0c1m0" type="checkbox"><label class="-hamburger-controls" for="-hamburger-memu-r0c1m0"><span class="-hamburger-open"></span><span class="-hamburger-close"></span></label>
+							<ul class="-horizontal with--hamburger">
 								<li><a href=" " class="tmbl-logout" target="_self" title="">Logout</a></li>
 							</ul>
 						</nav>
@@ -419,13 +418,13 @@
 				</div>
 			</div>
 		</div>
-      <div class="bee-row bee-row-2">
-        <div class="bee-row-content reverse">
-          <div class="bee-col bee-col-1 bee-col-w5">
-            <div class="bee-block bee-block-1 bee-spacer">
+      <div class="-row -row-2">
+        <div class="-row-content reverse">
+          <div class="-col -col-1 -col-w5">
+            <div class="-block -block-1 -spacer">
               <div class="spacer" style="height: 60px"></div>
             </div>
-            <div class="bee-block bee-block-2 bee-heading">
+            <div class="-block -block-2 -heading">
               <h1
                 style="
                   color: #e57965;
@@ -443,7 +442,7 @@
                 <span class="tinyMce-placeholder">Deteksi penyakit sapi </span>
               </h1>
             </div>
-            <div class="bee-block bee-block-3 bee-heading">
+            <div class="-block -block-3 -heading">
               <h1
                 style="
                   color: #171614;
@@ -464,10 +463,10 @@
                 >
               </h1>
             </div>
-            <div class="bee-block bee-block-4 bee-spacer">
+            <div class="-block -block-4 -spacer">
               <div class="spacer" style="height: 45px"></div>
             </div>
-            <div class="bee-block bee-block-5 bee-form">
+            <div class="-block -block-5 -form">
               <form
                 accept-charset="UTF-8"
                 action="ACTION_PLACEHOLDER"
@@ -477,7 +476,7 @@
                 target="_self" ></form>
               
             </form>
-            <div class="bee-form-row">
+            <div class="-form-row">
               <form method="post" action="/predict">
                       <label for="symptoms">Enter your symptoms:</label>
                       <input type="text" name="symptoms" id="symptoms">
@@ -485,14 +484,14 @@
                   </form>
                </div>
 
-                  <div class="bee-block bee-block-6 bee-spacer">
+                  <div class="-block -block-6 -spacer">
                     <div class="spacer" style="height: 30px"></div>
                   </div>
 
                 </div>
-                <div class="bee-form-row">
-                  <div class="bee-field bee-field-r1c0m4i2">
-                    <div class="bee-button-container">
+                <div class="-form-row">
+                  <div class="-field -field-r1c0m4i2">
+                    <div class="-button-container">
                       <button
                         id="r1c0m4i2"
                         name="submit"
@@ -506,29 +505,29 @@
                 </div>
               </form>
             </div>
-            <div class="bee-block bee-block-6 bee-spacer">
+            <div class="-block -block-6 -spacer">
               <div class="spacer" style="height: 70px"></div>
             </div>
           </div>
-          <div class="bee-col bee-col-2 bee-col-w3">
-            <div class="bee-block bee-block-1 bee-divider">
+          <div class="-col -col-2 -col-w3">
+            <div class="-block -block-1 -divider">
               <div class="spacer" style="height: 0px"></div>
             </div>
-            <div class="bee-block bee-block-2 bee-divider">
+            <div class="-block -block-2 -divider">
               <div
-                class="center bee-separator"
+                class="center -separator"
                 style="border-top: 1px solid #dddddd; width: 100%"
               ></div>
             </div>
           </div>
-          <div class="bee-col bee-col-3 bee-col-w4">
-            <div class="bee-block bee-block-1 bee-spacer">
+          <div class="-col -col-3 -col-w4">
+            <div class="-block -block-1 -spacer">
               <div class="spacer" style="height: 60px"></div>
             </div>
-            <div class="bee-block bee-block-2 bee-image">
+            <div class="-block -block-2 -image">
               <img
                 alt="Sapi Sehat Ente Senang"
-                class="bee-center bee-fixedwidth bee-fullwidthOnMobile"
+                class="-center -fixedwidth -fullwidthOnMobile"
                 src="https://img.freepik.com/free-photo/fun-3d-cartoon-cow-with-mask_183364-80084.jpg?w=740&t=st=1698893774~exp=1698894374~hmac=2ca0a93283ef5ff898d56732b80ad46c55492c92fb1be0946cd27d845234f8c8"
                 style="max-width: 480px"
               />
@@ -536,18 +535,18 @@
           </div>
         </div>
       </div>
-      <div class="bee-row bee-row-3">
-        <div class="bee-row-content">
-          <div class="bee-col bee-col-1 bee-col-w12">
-            <div class="bee-block bee-block-1 bee-divider">
+      <div class="-row -row-3">
+        <div class="-row-content">
+          <div class="-col -col-1 -col-w12">
+            <div class="-block -block-1 -divider">
               <div
-                class="center bee-separator"
+                class="center -separator"
                 style="border-top: 1px solid #dddddd; width: 100%"
               ></div>
             </div>
-            <div class="bee-block bee-block-2 bee-text">
+            <div class="-block -block-2 -text">
               <div
-                class="bee-text-content"
+                class="-text-content"
                 style="
                   line-height: 120%;
                   font-size: 12px;
