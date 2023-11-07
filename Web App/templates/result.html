@@ -1,12 +1,579 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Diagnosis Result</title>
-</head>
-<body>
-    <h1>Diagnosis Result</h1>
-    <p>Your diagnosis is: {{ diagnosis }}</p>
-    <p>Penanganan (Treatment): {{ penanganan }}</p>
-    <p>Resiko (Risk): {{ resiko }}</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>result</title>
+    <style>
+      .-row,
+      .-row-content {
+        position: relative;
+      }
+
+      .-form .-form-row .-field button {
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .-button .content,
+      .-row-2 .-col-1 .-block-5 .-button-container {
+        text-align: center;
+      }
+
+      .-row-2,
+      .-row-2 .-row-content {
+        background-size: auto;
+        background-repeat: no-repeat;
+      }
+
+      body {
+        background-color: #f8f2f0;
+        color: #000;
+        font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      }
+
+      a {
+        color: #0068a5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body,
+      h1,
+      p {
+        margin: 0;
+      }
+
+      .-row-content {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .-row-content.reverse,
+      .-row-content.reverse .-col {
+        -moz-transform: scale(1, -1);
+        -webkit-transform: scale(1, -1);
+        -o-transform: scale(1, -1);
+        -ms-transform: scale(1, -1);
+        transform: scale(1, -1);
+      }
+
+      .-row-content .-col-w3 {
+        flex-basis: 25%;
+      }
+
+      .-row-content .-col-w4 {
+        flex-basis: 33%;
+      }
+
+      .-row-content .-col-w5 {
+        flex-basis: 42%;
+      }
+
+      .-row-content .-col-w8 {
+        flex-basis: 67%;
+      }
+
+      .-row-2 .-col-1 .-block-5 div.label:not(.inline),
+      .-row-2 .-col-1 .-block-5 label:not(.inline),
+      .-row-content .-col-w12 {
+        flex-basis: 100%;
+      }
+
+      .-button a,
+      .-icon .-icon-label-right a {
+        text-decoration: none;
+      }
+
+      .-divider,
+      .-image {
+        overflow: auto;
+      }
+
+      .-divider .center,
+      .-image .-center {
+        margin: 0 auto;
+      }
+
+      .-row-2
+        .-col-1
+        .-block-5
+        .-form-row:not(.-sidelabel)
+        input:not([type="checkbox"]):not([type="radio"]),
+      .-row-2 .-col-3 .-block-2 {
+        width: 100%;
+      }
+
+      .-form .-form-row .-field {
+        padding: 3px;
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .-form
+        .-form-row
+        .-field
+        input:not([type="checkbox"]):not([type="radio"]) {
+        flex-grow: 1;
+        font-family: inherit;
+        font-size: inherit;
+      }
+
+      .-form .-form-row .-field .-button-container {
+        flex-grow: 1;
+      }
+
+      .-form input[type="color"] {
+        border: none;
+        height: 38px;
+      }
+
+      .-form input[type="color"]::-webkit-color-swatch-wrapper {
+        margin: 0;
+        padding: 2px;
+      }
+
+      .-form input[type="color"]::-webkit-color-swatch {
+        margin: 0;
+        padding: 0;
+      }
+
+      .-icon {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .-icon .-content {
+        display: flex;
+        align-items: center;
+      }
+
+      .-image img {
+        display: block;
+        width: 100%;
+      }
+
+      .-text {
+        overflow-wrap: anywhere;
+      }
+
+      @media (max-width: 768px) {
+        .-form form {
+          width: 100% !important;
+        }
+
+        .-row-content:not(.no_stack) {
+          display: block;
+        }
+      }
+
+      .-row-1,
+      .-row-4 {
+        background-color: #fff;
+        background-repeat: no-repeat;
+      }
+
+      .-row-1 .-row-content,
+      .-row-3 .-row-content {
+        background-repeat: no-repeat;
+        color: #000;
+      }
+
+      .-row-1 .-col-1,
+      .-row-1 .-col-2 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .-row-1 .-col-1 .-block-1 {
+        color: #000;
+        font-family: inherit;
+        font-size: 14px;
+        text-align: left;
+      }
+
+      .-row-1 .-col-2 .-block-1 {
+        padding: 10px;
+        text-align: right;
+      }
+
+      .-row-2 {
+        background-color: #fff;
+      }
+
+      .-row-2 .-row-content {
+        color: #000;
+      }
+
+      .-row-2 .-col-1,
+      .-row-2 .-col-2,
+      .-row-2 .-col-3,
+      .-row-3 .-col-1,
+      .-row-4 .-col-1 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+
+      .-row-2 .-col-1 .-block-2 {
+        padding-bottom: 15px;
+        padding-left: 20px;
+        padding-right: 10px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .-row-2 .-col-1 .-block-3 {
+        padding: 5px 5px 15px 20px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .-row-2 .-col-1 .-block-5 {
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .-row-2 .-col-2 .-block-1,
+      .-row-2 .-col-2 .-block-2 {
+        padding: 10px;
+      }
+
+      .-row-3 {
+        background-image: url("https://app-rsrc.get.io/public/resources/defaultrows/background1.png");
+        background-position: top center;
+        background-repeat: repeat;
+      }
+
+      .-row-3 .-col-1 .-block-1 {
+        padding: 20px;
+      }
+
+      .-row-4 .-row-content {
+        background-color: #fff;
+        background-repeat: no-repeat;
+        color: #000;
+      }
+
+      .-row-4 .-col-1 .-block-1 {
+        color: #1e0e4b;
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        text-align: center;
+      }
+
+      .-row-1 .-col-1 .-block-1 .-icon-image {
+        padding: 5px 5px 5px 20px;
+      }
+
+      .-row-1 .-col-1 .-block-1 .-icon:not(.-icon-first) .-content,
+      .-row-4 .-col-1 .-block-1 .-icon:not(.-icon-first) .-content {
+        margin-left: 0;
+      }
+
+      .-row-1 .-col-1 .-block-1 .-icon::not(.-icon-last) .-content {
+        margin-right: 0;
+      }
+
+      .-row-4 .-col-1 .-block-1 .-icon-image {
+        padding: 5px 6px 5px 5px;
+      }
+
+      .-row-4 .-col-1 .-block-1 .-icon::not(.-icon-last) .-content {
+        margin-right: 0;
+      }
+
+      .-row-2 .-col-1 .-block-5 form {
+        display: inline-block;
+        width: 100%;
+      }
+
+      .-row-2 .-col-1 .-block-5 div.label,
+      .-row-2 .-col-1 .-block-5 label {
+        color: #000;
+        letter-spacing: normal;
+        line-height: 200%;
+        text-align: left;
+        display: block;
+      }
+
+      .-row-2 .-col-1 .-block-5 ::-webkit-input-placeholder {
+        color: #000;
+      }
+
+      .-row-2 .-col-1 .-block-5 :-moz-placeholder {
+        color: #000;
+      }
+
+      .-row-2 .-col-1 .-block-5 ::-moz-placeholder {
+        color: #000;
+      }
+
+      .-row-2 .-col-1 .-block-5 :-ms-input-placeholder {
+        color: #000;
+      }
+
+      .-row-2 .-col-1 .-block-5 .-field > label:first-child,
+      .-row-2 .-col-1 .-block-5 div.label {
+        padding: 3px;
+      }
+
+      .-row-2
+        .-col-1
+        .-block-5
+        input:not([type="checkbox"]):not([type="radio"]):not([type="image"]) {
+        background-color: #fff;
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid transparent;
+        border-radius: 4px;
+        border-right: 1px solid transparent;
+        border-top: 1px solid transparent;
+        color: #000;
+        padding: 5px;
+        min-height: 42px;
+      }
+
+      .-row-2
+        .-col-1
+        .-block-5
+        input:not([type="checkbox"]):not([type="radio"]):focus {
+        outline-color: #7747ff;
+      }
+
+      .-row-2 .-col-1 .-block-5 button {
+        background-color: #e57965;
+        border-bottom: 0 solid transparent;
+        border-left: 0 solid transparent;
+        border-radius: 4px;
+        border-right: 0px solid transparent;
+        border-top: 0 solid transparent;
+        color: #fff;
+        letter-spacing: normal;
+        line-height: 200%;
+        padding: 5px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="-page-container">
+      <div class="-row -row-1">
+        <div class="-row-content no_stack">
+          <div class="-col -col-1 -col-w4">
+            <div class="-block -block-1 -icons">
+              <div class="-icon -icon-last">
+                <div class="-content">
+                  <div class="-icon-image">
+                    <img height="64px" src="images/Logo_1.png" width="auto" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="-col -col-2 -col-w8">
+            <div class="-block -block-1 -button">
+              <div
+                class="-button-content"
+                style="
+                  font-size: 18px;
+                  background-color: #e57965;
+                  border-bottom: 0px solid transparent;
+                  border-left: 0px solid transparent;
+                  border-radius: 6px;
+                  border-right: 0px solid transparent;
+                  border-top: 0px solid transparent;
+                  color: #ffffff;
+                  direction: ltr;
+                  font-family: inherit;
+                  font-weight: 400;
+                  max-width: 100%;
+                  padding-bottom: 5px;
+                  padding-left: 20px;
+                  padding-right: 20px;
+                  padding-top: 5px;
+                  width: auto;
+                  display: inline-block;
+                "
+              >
+                <span
+                  style="
+                    word-break: break-word;
+                    font-size: 18px;
+                    line-height: 200%;
+                  "
+                  >Logout</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="-row -row-2">
+        <div class="-row-content reverse">
+          <div class="-col -col-1 -col-w5">
+            <div class="-block -block-1 -spacer">
+              <div class="spacer" style="height: 60px"></div>
+            </div>
+            <div class="-block -block-2 -heading">
+              <h1
+                style="
+                  color: #e57965;
+                  direction: ltr;
+                  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+                  font-size: 19px;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  line-height: 120%;
+                  text-align: left;
+                  margin-top: 0;
+                  margin-bottom: 0;
+                "
+              >
+                <span class="tinyMce-placeholder">Deteksi penyakit sapi </span>
+              </h1>
+            </div>
+            <div class="-block -block-3 -heading">
+              <h1
+                style="
+                  color: #171614;
+                  direction: ltr;
+                  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+                  font-size: 45px;
+                  font-weight: 700;
+                  letter-spacing: normal;
+                  line-height: 120%;
+                  text-align: left;
+                  margin-top: 0;
+                  margin-bottom: 0;
+                "
+              >
+                <span class="tinyMce-placeholder"
+                  >Sistem Pakar Diagnosa Penyakit Pada Sapi Menggunakan Metode
+                  Rational Unified Process</span
+                >
+              </h1>
+            </div>
+            <div class="-block -block-4 -spacer">
+              <div class="spacer" style="height: 45px"></div>
+            </div>
+            <div class="-block -block-5 -form">
+              <form
+                accept-charset="UTF-8"
+                action="ACTION_PLACEHOLDER"
+                autocomplete="on"
+                enctype="multipart/form-data"
+                method="post"
+                target="_self"
+              >
+              
+              <div>
+                <h1>Diagnosis Result</h1>
+                <p>Your diagnosis is: {{ diagnosis }}</p>
+                <p>Penanganan (Treatment): {{ penanganan }}</p>
+                <p>Resiko (Risk): {{ resiko }}</p>
+              </div>
+
+            <div
+                class="bee-button-content"
+                style="
+                  font-size: 16px;
+                  background-color: #e57965;
+                  border-bottom: 0px solid transparent;
+                  border-left: 0px solid transparent;
+                  border-radius: 6px;
+                  border-right: 0px solid transparent;
+                  border-top: 0px solid transparent;
+                  color: #ffffff;
+                  direction: rtl;
+                  font-family: inherit;
+                  font-weight: 400;
+                  letter-spacing: 0px;
+                  max-width: 100%;
+                  padding-bottom: 10px;
+                  padding-left: 60px;
+                  padding-right: 60px;
+                  padding-top: 10px;
+                  width: auto;
+                  display: inline-block;
+                "
+              >
+                <span
+                  style="
+                    word-break: break-word;
+                    font-size: 16px;
+                    line-height: 200%;
+                    letter-spacing: normal;
+                  "
+                  >Kembali</span
+                >
+              </div>
+            <div class="-block -block-6 -spacer">
+              <div class="spacer" style="height: 70px"></div>
+            </div>
+          </div>
+          <div class="-col -col-2 -col-w3">
+            <div class="-block -block-1 -divider">
+              <div
+                class="center -separator"
+                style="border-top: 1px solid #e57965; width: 100%"
+              ></div>
+            </div>
+            <div class="-block -block-2 -divider">
+              <div class="spacer" style="height: 0px"></div>
+            </div>
+          </div>
+          <div class="-col -col-3 -col-w4">
+            <div class="-block -block-1 -spacer">
+              <div class="spacer" style="height: 60px"></div>
+            </div>
+            <div class="-block -block-2 -image">
+              <img
+                alt="Sapi Sehat Ente Senang"
+                class="-center -fixedwidth -fullwidthOnMobile"
+                src="https://img.freepik.com/free-photo/fun-3d-cartoon-cow-with-mask_183364-80084.jpg?w=740&t=st=1698893774~exp=1698894374~hmac=2ca0a93283ef5ff898d56732b80ad46c55492c92fb1be0946cd27d845234f8c8"
+                style="max-width: 480px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="-row -row-3">
+        <div class="-row-content">
+          <div class="-col -col-1 -col-w12">
+            <div class="-block -block-1 -text">
+              <div
+                class="-text-content"
+                style="
+                  line-height: 120%;
+                  font-size: 12px;
+                  font-family: inherit;
+                  color: #555555;
+                "
+              >
+                <p
+                  style="font-size: 22px; line-height: 26px; text-align: center"
+                >
+                  Behind the word mountains, far from the countries Vokalia and
+                  Consonantia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
